@@ -1,4 +1,5 @@
 const route = require('express').Router();
+console.log("into route to products")
 const Product = require('../../db').Product;
 
 route.get('/', (req, res) => {
@@ -6,6 +7,7 @@ route.get('/', (req, res) => {
 
     Product.findAll()
         .then((products) => {
+            console.log("products list hit")
             res.status(200).send(products)
         })
         .catch((err) => {

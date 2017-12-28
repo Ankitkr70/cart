@@ -29,7 +29,7 @@ function createProductCard(product) {
 }
 
 $(function () {
-    let productList = $('#product-list')
+    let productList = $('.product-list')
     fetchProducts(function (products) {
         productList.empty()
         for (product of products) {
